@@ -1,0 +1,47 @@
+{
+  "name": "carbonswap-interface-contracts",
+  "version": "1.0.0",
+  "license": "GPL-3.0",
+  "description": "Carbonswap Interface contracts",
+  "public": false,
+  "author": "TopSootPrime <tsp@carbonswap.finance>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carbonswap/carbonswap-interface-contracts.git"
+  },
+  "homepage": "https://github.com/carbonswap/carbonswap-interface-contracts#readme",
+  "keywords": [
+    "carbonswap",
+    "interface",
+    "contracts"
+  ],
+  "scripts": {
+    "build": "hardhat compile",
+    "format:test": "prettier --write \"test/**/*.ts\"",
+    "format": "prettier --write \"contracts/**/*.sol\"",
+    "lint": "yarn format && solhint -c .solhint.json contracts/**/*.sol",
+    "test": "hardhat test --verbose"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "2.0.2",
+    "@nomiclabs/hardhat-waffle": "2.0.1",
+    "@openzeppelin/contracts": "4.1.0",
+    "@openzeppelin/test-helpers": "^0.5.11",
+    "@typechain/hardhat": "^2.0.1",
+    "@types/chai": "^4.2.18",
+    "@types/jest": "^26.0.23",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^15.6.0",
+    "chai": "^4.3.4",
+    "dotenv": "^10.0.0",
+    "ethereum-waffle": "3.3.0",
+    "ethers": "5.1.4",
+    "hardhat": "2.3.0",
+    "prettier": "2.3.0",
+    "prettier-plugin-solidity": "1.0.0-beta.10",
+    "solhint": "^3.3.4",
+    "solhint-plugin-prettier": "^0.0.5",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  }
+}

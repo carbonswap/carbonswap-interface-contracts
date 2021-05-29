@@ -1,2 +1,11 @@
 # carbonswap-interface-contracts
-carbonswap-interface-contracts
+
+## Deployed addresses
+- factory: `0x17854c8d5a41d5A89B275386E24B2F38FD0AfbDd`
+- routerV2: `0x3b932c3f73A9Eb6836Cd31145F2D47561e21DeCB`
+- susu: `0x9cd9CAECDC816C3E7123A4F130A91A684D01f4Dc`
+- party (xSUSU): `0x1C41d2223dc95605fc4395294e65f170A4Fb1b40`
+- chef: `0xD323586fB6b6E33cb0a7309c131811FaAfeE737B`
+
+## Misc
+- initcode: `0x930f72af52e9f7553fd568961dff48b9d73ba993c0ddc3f637f6af07a34e97bd`
