@@ -1,8 +1,8 @@
 {
-  "id": "f0cc57d27c5638a6875b2f6e29ce7436",
+  "id": "c68f1c40f37758d16b3ca63931f7d69a",
   "_format": "hh-sol-build-info-1",
-  "solcVersion": "0.7.6",
-  "solcLongVersion": "0.7.6+commit.7338295f",
+  "solcVersion": "0.8.4",
+  "solcLongVersion": "0.8.4+commit.c7e474f2",
   "input": {
     "language": "Solidity",
     "sources": {
@@ -264,12 +264,14 @@
                 62
               ],
               "name": "IUniswapV2Factory",
+              "nameLocation": "69:17:0",
               "nodeType": "ContractDefinition",
               "nodes": [
                 {
                   "anonymous": false,
                   "id": 11,
                   "name": "PairCreated",
+                  "nameLocation": "99:11:0",
                   "nodeType": "EventDefinition",
                   "parameters": {
                     "id": 10,
@@ -281,6 +283,7 @@
                         "indexed": true,
                         "mutability": "mutable",
                         "name": "token0",
+                        "nameLocation": "136:6:0",
                         "nodeType": "VariableDeclaration",
                         "scope": 11,
                         "src": "120:22:0",
@@ -309,6 +312,7 @@
                         "indexed": true,
                         "mutability": "mutable",
                         "name": "token1",
+                        "nameLocation": "168:6:0",
                         "nodeType": "VariableDeclaration",
                         "scope": 11,
                         "src": "152:22:0",
@@ -337,6 +341,7 @@
                         "indexed": false,
                         "mutability": "mutable",
                         "name": "pair",
+                        "nameLocation": "192:4:0",
                         "nodeType": "VariableDeclaration",
                         "scope": 11,
                         "src": "184:12:0",
@@ -365,6 +370,7 @@
                         "indexed": false,
                         "mutability": "mutable",
                         "name": "",
+                        "nameLocation": "-1:-1:-1",
                         "nodeType": "VariableDeclaration",
                         "scope": 11,
                         "src": "206:7:0",
@@ -398,6 +404,7 @@
                   "kind": "function",
                   "modifiers": [],
                   "name": "feeTo",
+                  "nameLocation": "235:5:0",
                   "nodeType": "FunctionDefinition",
                   "parameters": {
                     "id": 12,
@@ -414,6 +421,7 @@
                         "id": 14,
                         "mutability": "mutable",
                         "name": "",
+                        "nameLocation": "-1:-1:-1",
                         "nodeType": "VariableDeclaration",
                         "scope": 16,
                         "src": "266:7:0",
@@ -452,6 +460,7 @@
                   "kind": "function",
                   "modifiers": [],
                   "name": "feeToSetter",
+                  "nameLocation": "290:11:0",
                   "nodeType": "FunctionDefinition",
                   "parameters": {
                     "id": 17,
@@ -468,6 +477,7 @@
                         "id": 19,
                         "mutability": "mutable",
                         "name": "",
+                        "nameLocation": "-1:-1:-1",
                         "nodeType": "VariableDeclaration",
                         "scope": 21,
                         "src": "327:7:0",
@@ -506,6 +516,7 @@
                   "kind": "function",
                   "modifiers": [],
                   "name": "getPair",
+                  "nameLocation": "351:7:0",
                   "nodeType": "FunctionDefinition",
                   "parameters": {
                     "id": 26,
@@ -516,6 +527,7 @@
                         "id": 23,
                         "mutability": "mutable",
                         "name": "tokenA",
+                        "nameLocation": "367:6:0",
                         "nodeType": "VariableDeclaration",
                         "scope": 30,
                         "src": "359:14:0",
@@ -543,6 +555,7 @@
                         "id": 25,
                         "mutability": "mutable",
                         "name": "tokenB",
+                        "nameLocation": "383:6:0",
                         "nodeType": "VariableDeclaration",
                         "scope": 30,
                         "src": "375:14:0",
@@ -577,6 +590,7 @@
                         "id": 28,
                         "mutability": "mutable",
                         "name": "pair",
+                        "nameLocation": "446:4:0",
                         "nodeType": "VariableDeclaration",
                         "scope": 30,
                         "src": "438:12:0",
@@ -615,6 +629,7 @@
                   "kind": "function",
                   "modifiers": [],
                   "name": "allPairs",
+                  "nameLocation": "467:8:0",
                   "nodeType": "FunctionDefinition",
                   "parameters": {
                     "id": 33,
@@ -625,6 +640,7 @@
                         "id": 32,
                         "mutability": "mutable",
                         "name": "",
+                        "nameLocation": "-1:-1:-1",
                         "nodeType": "VariableDeclaration",
                         "scope": 37,
                         "src": "476:7:0",
@@ -658,6 +674,7 @@
                         "id": 35,
                         "mutability": "mutable",
                         "name": "pair",
+                        "nameLocation": "516:4:0",
                         "nodeType": "VariableDeclaration",
                         "scope": 37,
                         "src": "508:12:0",
@@ -696,6 +713,7 @@
                   "kind": "function",
                   "modifiers": [],
                   "name": "allPairsLength",
+                  "nameLocation": "537:14:0",
                   "nodeType": "FunctionDefinition",
                   "parameters": {
                     "id": 38,
@@ -712,6 +730,7 @@
                         "id": 40,
                         "mutability": "mutable",
                         "name": "",
+                        "nameLocation": "-1:-1:-1",
                         "nodeType": "VariableDeclaration",
                         "scope": 42,
                         "src": "577:7:0",
@@ -749,6 +768,7 @@
                   "kind": "function",
                   "modifiers": [],
                   "name": "createPair",
+                  "nameLocation": "601:10:0",
                   "nodeType": "FunctionDefinition",
                   "parameters": {
                     "id": 47,
@@ -759,6 +779,7 @@
                         "id": 44,
                         "mutability": "mutable",
                         "name": "tokenA",
+                        "nameLocation": "620:6:0",
                         "nodeType": "VariableDeclaration",
                         "scope": 51,
                         "src": "612:14:0",
@@ -786,6 +807,7 @@
                         "id": 46,
                         "mutability": "mutable",
                         "name": "tokenB",
+                        "nameLocation": "636:6:0",
                         "nodeType": "VariableDeclaration",
                         "scope": 51,
                         "src": "628:14:0",
@@ -820,6 +842,7 @@
                         "id": 49,
                         "mutability": "mutable",
                         "name": "pair",
+                        "nameLocation": "686:4:0",
                         "nodeType": "VariableDeclaration",
                         "scope": 51,
                         "src": "678:12:0",
@@ -858,6 +881,7 @@
                   "kind": "function",
                   "modifiers": [],
                   "name": "setFeeTo",
+                  "nameLocation": "707:8:0",
                   "nodeType": "FunctionDefinition",
                   "parameters": {
                     "id": 54,
@@ -868,6 +892,7 @@
                         "id": 53,
                         "mutability": "mutable",
                         "name": "",
+                        "nameLocation": "-1:-1:-1",
                         "nodeType": "VariableDeclaration",
                         "scope": 56,
                         "src": "716:7:0",
@@ -912,6 +937,7 @@
                   "kind": "function",
                   "modifiers": [],
                   "name": "setFeeToSetter",
+                  "nameLocation": "749:14:0",
                   "nodeType": "FunctionDefinition",
                   "parameters": {
                     "id": 59,
@@ -922,6 +948,7 @@
                         "id": 58,
                         "mutability": "mutable",
                         "name": "",
+                        "nameLocation": "-1:-1:-1",
                         "nodeType": "VariableDeclaration",
                         "scope": 61,
                         "src": "764:7:0",
@@ -961,7 +988,8 @@
                 }
               ],
               "scope": 63,
-              "src": "59:725:0"
+              "src": "59:725:0",
+              "usedErrors": []
             }
           ],
           "src": "33:752:0"

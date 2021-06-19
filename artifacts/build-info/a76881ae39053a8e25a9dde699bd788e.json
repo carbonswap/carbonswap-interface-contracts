@@ -1,13 +1,13 @@
 {
-  "id": "f90da1683aee4327d31951421bc73dd6",
+  "id": "a76881ae39053a8e25a9dde699bd788e",
   "_format": "hh-sol-build-info-1",
-  "solcVersion": "0.7.6",
-  "solcLongVersion": "0.7.6+commit.7338295f",
+  "solcVersion": "0.8.4",
+  "solcLongVersion": "0.8.4+commit.c7e474f2",
   "input": {
     "language": "Solidity",
     "sources": {
       "contracts/openzeppelin/libraries/SignedSafeMath.sol": {
-        "content": "// SPDX-License-Identifier: MIT\n\npragma solidity >=0.6.0 <0.8.0;\n\n/**\n * @title SignedSafeMath\n * @dev Signed math operations with safety checks that revert on error.\n */\nlibrary SignedSafeMath {\n    int256 private constant _INT256_MIN = -2**255;\n\n    /**\n     * @dev Returns the multiplication of two signed integers, reverting on\n     * overflow.\n     *\n     * Counterpart to Solidity's `*` operator.\n     *\n     * Requirements:\n     *\n     * - Multiplication cannot overflow.\n     */\n    function mul(int256 a, int256 b) internal pure returns (int256) {\n        // Gas optimization: this is cheaper than requiring 'a' not being zero, but the\n        // benefit is lost if 'b' is also tested.\n        // See: https://github.com/OpenZeppelin/openzeppelin-contracts/pull/522\n        if (a == 0) {\n            return 0;\n        }\n\n        require(\n            !(a == -1 && b == _INT256_MIN),\n            \"SignedSafeMath: multiplication overflow\"\n        );\n\n        int256 c = a * b;\n        require(c / a == b, \"SignedSafeMath: multiplication overflow\");\n\n        return c;\n    }\n\n    /**\n     * @dev Returns the integer division of two signed integers. Reverts on\n     * division by zero. The result is rounded towards zero.\n     *\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\n     * `revert` opcode (which leaves remaining gas untouched) while Solidity\n     * uses an invalid opcode to revert (consuming all remaining gas).\n     *\n     * Requirements:\n     *\n     * - The divisor cannot be zero.\n     */\n    function div(int256 a, int256 b) internal pure returns (int256) {\n        require(b != 0, \"SignedSafeMath: division by zero\");\n        require(\n            !(b == -1 && a == _INT256_MIN),\n            \"SignedSafeMath: division overflow\"\n        );\n\n        int256 c = a / b;\n\n        return c;\n    }\n\n    /**\n     * @dev Returns the subtraction of two signed integers, reverting on\n     * overflow.\n     *\n     * Counterpart to Solidity's `-` operator.\n     *\n     * Requirements:\n     *\n     * - Subtraction cannot overflow.\n     */\n    function sub(int256 a, int256 b) internal pure returns (int256) {\n        int256 c = a - b;\n        require(\n            (b >= 0 && c <= a) || (b < 0 && c > a),\n            \"SignedSafeMath: subtraction overflow\"\n        );\n\n        return c;\n    }\n\n    /**\n     * @dev Returns the addition of two signed integers, reverting on\n     * overflow.\n     *\n     * Counterpart to Solidity's `+` operator.\n     *\n     * Requirements:\n     *\n     * - Addition cannot overflow.\n     */\n    function add(int256 a, int256 b) internal pure returns (int256) {\n        int256 c = a + b;\n        require(\n            (b >= 0 && c >= a) || (b < 0 && c < a),\n            \"SignedSafeMath: addition overflow\"\n        );\n\n        return c;\n    }\n}\n"
+        "content": "// SPDX-License-Identifier: MIT\n\npragma solidity >=0.6.2 <0.9.0;\n\n/**\n * @title SignedSafeMath\n * @dev Signed math operations with safety checks that revert on error.\n */\nlibrary SignedSafeMath {\n    int256 private constant _INT256_MIN = -2**255;\n\n    /**\n     * @dev Returns the multiplication of two signed integers, reverting on\n     * overflow.\n     *\n     * Counterpart to Solidity's `*` operator.\n     *\n     * Requirements:\n     *\n     * - Multiplication cannot overflow.\n     */\n    function mul(int256 a, int256 b) internal pure returns (int256) {\n        // Gas optimization: this is cheaper than requiring 'a' not being zero, but the\n        // benefit is lost if 'b' is also tested.\n        // See: https://github.com/OpenZeppelin/openzeppelin-contracts/pull/522\n        if (a == 0) {\n            return 0;\n        }\n\n        require(\n            !(a == -1 && b == _INT256_MIN),\n            \"SignedSafeMath: multiplication overflow\"\n        );\n\n        int256 c = a * b;\n        require(c / a == b, \"SignedSafeMath: multiplication overflow\");\n\n        return c;\n    }\n\n    /**\n     * @dev Returns the integer division of two signed integers. Reverts on\n     * division by zero. The result is rounded towards zero.\n     *\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\n     * `revert` opcode (which leaves remaining gas untouched) while Solidity\n     * uses an invalid opcode to revert (consuming all remaining gas).\n     *\n     * Requirements:\n     *\n     * - The divisor cannot be zero.\n     */\n    function div(int256 a, int256 b) internal pure returns (int256) {\n        require(b != 0, \"SignedSafeMath: division by zero\");\n        require(\n            !(b == -1 && a == _INT256_MIN),\n            \"SignedSafeMath: division overflow\"\n        );\n\n        int256 c = a / b;\n\n        return c;\n    }\n\n    /**\n     * @dev Returns the subtraction of two signed integers, reverting on\n     * overflow.\n     *\n     * Counterpart to Solidity's `-` operator.\n     *\n     * Requirements:\n     *\n     * - Subtraction cannot overflow.\n     */\n    function sub(int256 a, int256 b) internal pure returns (int256) {\n        int256 c = a - b;\n        require(\n            (b >= 0 && c <= a) || (b < 0 && c > a),\n            \"SignedSafeMath: subtraction overflow\"\n        );\n\n        return c;\n    }\n\n    /**\n     * @dev Returns the addition of two signed integers, reverting on\n     * overflow.\n     *\n     * Counterpart to Solidity's `+` operator.\n     *\n     * Requirements:\n     *\n     * - Addition cannot overflow.\n     */\n    function add(int256 a, int256 b) internal pure returns (int256) {\n        int256 c = a + b;\n        require(\n            (b >= 0 && c >= a) || (b < 0 && c < a),\n            \"SignedSafeMath: addition overflow\"\n        );\n\n        return c;\n    }\n}\n"
       }
     },
     "settings": {
@@ -39,16 +39,16 @@
             "bytecode": {
               "generatedSources": [],
               "linkReferences": {},
-              "object": "60566023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212206de26d08ed3defbec6ce28df96495b67aecfe2ee2318d418bd1864ba816ab89564736f6c63430007060033",
-              "opcodes": "PUSH1 0x56 PUSH1 0x23 PUSH1 0xB DUP3 DUP3 DUP3 CODECOPY DUP1 MLOAD PUSH1 0x0 BYTE PUSH1 0x73 EQ PUSH1 0x16 JUMPI INVALID JUMPDEST ADDRESS PUSH1 0x0 MSTORE PUSH1 0x73 DUP2 MSTORE8 DUP3 DUP2 RETURN INVALID PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 PUSH14 0xE26D08ED3DEFBEC6CE28DF96495B PUSH8 0xAECFE2EE2318D418 0xBD XOR PUSH5 0xBA816AB895 PUSH5 0x736F6C6343 STOP SMOD MOD STOP CALLER ",
-              "sourceMap": "171:2631:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;"
+              "object": "60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220b555c4274a2cac0a453cfc768a823307916754ad00083ee4cdf0920e59872a5364736f6c63430008040033",
+              "opcodes": "PUSH1 0x56 PUSH1 0x37 PUSH1 0xB DUP3 DUP3 DUP3 CODECOPY DUP1 MLOAD PUSH1 0x0 BYTE PUSH1 0x73 EQ PUSH1 0x2A JUMPI PUSH4 0x4E487B71 PUSH1 0xE0 SHL PUSH1 0x0 MSTORE PUSH1 0x0 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH1 0x0 REVERT JUMPDEST ADDRESS PUSH1 0x0 MSTORE PUSH1 0x73 DUP2 MSTORE8 DUP3 DUP2 RETURN INVALID PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xB5 SSTORE 0xC4 0x27 0x4A 0x2C 0xAC EXP GASLIMIT EXTCODECOPY 0xFC PUSH23 0x8A823307916754AD00083EE4CDF0920E59872A5364736F PUSH13 0x63430008040033000000000000 ",
+              "sourceMap": "171:2631:0:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;171:2631:0;;;;;;;;;;;;;;;;;"
             },
             "deployedBytecode": {
               "generatedSources": [],
               "immutableReferences": {},
               "linkReferences": {},
-              "object": "73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212206de26d08ed3defbec6ce28df96495b67aecfe2ee2318d418bd1864ba816ab89564736f6c63430007060033",
-              "opcodes": "PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 PUSH14 0xE26D08ED3DEFBEC6CE28DF96495B PUSH8 0xAECFE2EE2318D418 0xBD XOR PUSH5 0xBA816AB895 PUSH5 0x736F6C6343 STOP SMOD MOD STOP CALLER ",
+              "object": "73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220b555c4274a2cac0a453cfc768a823307916754ad00083ee4cdf0920e59872a5364736f6c63430008040033",
+              "opcodes": "PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xB5 SSTORE 0xC4 0x27 0x4A 0x2C 0xAC EXP GASLIMIT EXTCODECOPY 0xFC PUSH23 0x8A823307916754AD00083EE4CDF0920E59872A5364736F PUSH13 0x63430008040033000000000000 ",
               "sourceMap": "171:2631:0:-:0;;;;;;;;"
             },
             "methodIdentifiers": {}
@@ -75,9 +75,9 @@
                 "solidity",
                 ">=",
                 "0.6",
-                ".0",
+                ".2",
                 "<",
-                "0.8",
+                "0.9",
                 ".0"
               ],
               "nodeType": "PragmaDirective",
@@ -100,6 +100,7 @@
                 178
               ],
               "name": "SignedSafeMath",
+              "nameLocation": "179:14:0",
               "nodeType": "ContractDefinition",
               "nodes": [
                 {
@@ -107,6 +108,7 @@
                   "id": 8,
                   "mutability": "constant",
                   "name": "_INT256_MIN",
+                  "nameLocation": "224:11:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 178,
                   "src": "200:45:0",
@@ -505,6 +507,7 @@
                             "id": 40,
                             "mutability": "mutable",
                             "name": "c",
+                            "nameLocation": "972:1:0",
                             "nodeType": "VariableDeclaration",
                             "scope": 56,
                             "src": "965:8:0",
@@ -740,6 +743,7 @@
                   "kind": "function",
                   "modifiers": [],
                   "name": "mul",
+                  "nameLocation": "500:3:0",
                   "nodeType": "FunctionDefinition",
                   "parameters": {
                     "id": 14,
@@ -750,6 +754,7 @@
                         "id": 11,
                         "mutability": "mutable",
                         "name": "a",
+                        "nameLocation": "511:1:0",
                         "nodeType": "VariableDeclaration",
                         "scope": 57,
                         "src": "504:8:0",
@@ -776,6 +781,7 @@
                         "id": 13,
                         "mutability": "mutable",
                         "name": "b",
+                        "nameLocation": "521:1:0",
                         "nodeType": "VariableDeclaration",
                         "scope": 57,
                         "src": "514:8:0",
@@ -809,6 +815,7 @@
                         "id": 16,
                         "mutability": "mutable",
                         "name": "",
+                        "nameLocation": "-1:-1:-1",
                         "nodeType": "VariableDeclaration",
                         "scope": 57,
                         "src": "547:6:0",
@@ -1181,6 +1188,7 @@
                             "id": 89,
                             "mutability": "mutable",
                             "name": "c",
+                            "nameLocation": "1802:1:0",
                             "nodeType": "VariableDeclaration",
                             "scope": 96,
                             "src": "1795:8:0",
@@ -1280,6 +1288,7 @@
                   "kind": "function",
                   "modifiers": [],
                   "name": "div",
+                  "nameLocation": "1548:3:0",
                   "nodeType": "FunctionDefinition",
                   "parameters": {
                     "id": 63,
@@ -1290,6 +1299,7 @@
                         "id": 60,
                         "mutability": "mutable",
                         "name": "a",
+                        "nameLocation": "1559:1:0",
                         "nodeType": "VariableDeclaration",
                         "scope": 97,
                         "src": "1552:8:0",
@@ -1316,6 +1326,7 @@
                         "id": 62,
                         "mutability": "mutable",
                         "name": "b",
+                        "nameLocation": "1569:1:0",
                         "nodeType": "VariableDeclaration",
                         "scope": 97,
                         "src": "1562:8:0",
@@ -1349,6 +1360,7 @@
                         "id": 65,
                         "mutability": "mutable",
                         "name": "",
+                        "nameLocation": "-1:-1:-1",
                         "nodeType": "VariableDeclaration",
                         "scope": 97,
                         "src": "1595:6:0",
@@ -1395,6 +1407,7 @@
                             "id": 108,
                             "mutability": "mutable",
                             "name": "c",
+                            "nameLocation": "2157:1:0",
                             "nodeType": "VariableDeclaration",
                             "scope": 136,
                             "src": "2150:8:0",
@@ -1820,6 +1833,7 @@
                   "kind": "function",
                   "modifiers": [],
                   "name": "sub",
+                  "nameLocation": "2085:3:0",
                   "nodeType": "FunctionDefinition",
                   "parameters": {
                     "id": 103,
@@ -1830,6 +1844,7 @@
                         "id": 100,
                         "mutability": "mutable",
                         "name": "a",
+                        "nameLocation": "2096:1:0",
                         "nodeType": "VariableDeclaration",
                         "scope": 137,
                         "src": "2089:8:0",
@@ -1856,6 +1871,7 @@
                         "id": 102,
                         "mutability": "mutable",
                         "name": "b",
+                        "nameLocation": "2106:1:0",
                         "nodeType": "VariableDeclaration",
                         "scope": 137,
                         "src": "2099:8:0",
@@ -1889,6 +1905,7 @@
                         "id": 105,
                         "mutability": "mutable",
                         "name": "",
+                        "nameLocation": "-1:-1:-1",
                         "nodeType": "VariableDeclaration",
                         "scope": 137,
                         "src": "2132:6:0",
@@ -1935,6 +1952,7 @@
                             "id": 148,
                             "mutability": "mutable",
                             "name": "c",
+                            "nameLocation": "2637:1:0",
                             "nodeType": "VariableDeclaration",
                             "scope": 176,
                             "src": "2630:8:0",
@@ -2360,6 +2378,7 @@
                   "kind": "function",
                   "modifiers": [],
                   "name": "add",
+                  "nameLocation": "2565:3:0",
                   "nodeType": "FunctionDefinition",
                   "parameters": {
                     "id": 143,
@@ -2370,6 +2389,7 @@
                         "id": 140,
                         "mutability": "mutable",
                         "name": "a",
+                        "nameLocation": "2576:1:0",
                         "nodeType": "VariableDeclaration",
                         "scope": 177,
                         "src": "2569:8:0",
@@ -2396,6 +2416,7 @@
                         "id": 142,
                         "mutability": "mutable",
                         "name": "b",
+                        "nameLocation": "2586:1:0",
                         "nodeType": "VariableDeclaration",
                         "scope": 177,
                         "src": "2579:8:0",
@@ -2429,6 +2450,7 @@
                         "id": 145,
                         "mutability": "mutable",
                         "name": "",
+                        "nameLocation": "-1:-1:-1",
                         "nodeType": "VariableDeclaration",
                         "scope": 177,
                         "src": "2612:6:0",
@@ -2461,7 +2483,8 @@
                 }
               ],
               "scope": 179,
-              "src": "171:2631:0"
+              "src": "171:2631:0",
+              "usedErrors": []
             }
           ],
           "src": "33:2770:0"
